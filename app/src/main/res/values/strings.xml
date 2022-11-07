@@ -2,4 +2,8 @@
     <string name="app_name">Beauty saloon</string>
     <string name="beauty_saloon">beauty saloon</string>
     <string name="text_auth">Введите логин и пароль</string>
+    <string name="text_login">Login</string>
+    <string name="text_password">Password</string>
+    <string name="btn_enter">Войти</string>
+    <string name="btn_registration">Зарегестрироваться</string>
 </resources>
