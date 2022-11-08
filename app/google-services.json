@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "680831746660",
+    "project_id": "saloon-a1ad2",
+    "storage_bucket": "saloon-a1ad2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680831746660:android:91bf94bec598a74a76d571",
+        "android_client_info": {
+          "package_name": "com.kuzmin.beautysaloon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "680831746660-ceo4n8evfa3s71jpefjdcaug12mpoll9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYAcfsHJlw2oU2F-E2kVjVgvsuWajwkMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "680831746660-ceo4n8evfa3s71jpefjdcaug12mpoll9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
