@@ -1,5 +1,6 @@
 package com.kuzmin.beautysaloon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -64,7 +65,8 @@ public class AuthActivity extends AppCompatActivity {
         button_add_clint.setOnClickListener(new View.OnClickListener() {//кнопка добавить клиента после входа в аккаунт
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(AuthActivity.this, SaveReadActivity.class);
+                startActivity(intent);
             }
         });
         button_find_client.setOnClickListener(new View.OnClickListener() {//кнопка найти клиента после входа в аккаунт

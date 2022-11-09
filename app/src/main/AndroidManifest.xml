@@ -28,6 +28,7 @@
                 android:value="" />
         </activity>
         <activity android:name="com.kuzmin.beautysaloon.AuthActivity" />
+        <activity android:name="com.kuzmin.beautysaloon.SaveReadActivity" />
     </application>
 
 </manifest>

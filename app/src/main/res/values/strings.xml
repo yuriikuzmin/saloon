@@ -9,4 +9,7 @@
     <string name="btn_exit">Выйти из аккаунта</string>
     <string name="btn_add_client">Добавить клиента в базу</string>
     <string name="btn_find_client">Найти клиента в базе</string>
+    <string name="btn_photo_client">Добавить фото клиента</string>
+    <string name="btn_save_client">Добавить клиента базу</string>
+    <string name="btn_read_base">Посмотреть базу клиентов</string>
 </resources>
