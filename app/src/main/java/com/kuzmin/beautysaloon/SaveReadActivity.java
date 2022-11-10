@@ -74,7 +74,8 @@ public class SaveReadActivity extends AppCompatActivity {
         btn_read_base.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(SaveReadActivity.this, ReadBaseActivity.class);
+                startActivity(intent);
             }
         });
 
