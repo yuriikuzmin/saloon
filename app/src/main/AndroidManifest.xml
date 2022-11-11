@@ -30,6 +30,9 @@
         <activity android:name="com.kuzmin.beautysaloon.AuthActivity" />
         <activity android:name="com.kuzmin.beautysaloon.SaveReadActivity" />
         <activity android:name="com.kuzmin.beautysaloon.ReadBaseActivity" />
+        <activity android:name="com.kuzmin.beautysaloon.ShowActivity" />
+        <activity android:name="com.kuzmin.beautysaloon.FindActivity" />
+        <activity android:name="com.kuzmin.beautysaloon.FindShowActivity" />
     </application>
 
 </manifest>

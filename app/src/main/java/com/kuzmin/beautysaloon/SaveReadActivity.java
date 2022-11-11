@@ -60,14 +60,14 @@ public class SaveReadActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getPhoto();
-                uploadPhoto();
+
             }
         });
 
         btn_save_client.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveClient();
+                uploadPhoto();
             }
         });
 
@@ -106,6 +106,7 @@ public class SaveReadActivity extends AppCompatActivity {
         if(requestCode==1 && data!=null && data.getData()!=null)
         {
             if(resultCode==RESULT_OK ){
+                Log.d("LOG", "Картинка Uri:"+ data.getData());
                 img_photo_client.setImageURI(data.getData());
             }
         }
@@ -128,6 +129,8 @@ public class SaveReadActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Uri> task) {
                 uploadUri=task.getResult();
                 Log.d("LOG", "Ссылка на storage"+uploadUri.toString());
+                saveClient();
+
 
 
             }

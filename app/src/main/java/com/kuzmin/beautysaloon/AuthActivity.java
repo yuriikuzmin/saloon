@@ -72,7 +72,8 @@ public class AuthActivity extends AppCompatActivity {
         button_find_client.setOnClickListener(new View.OnClickListener() {//кнопка найти клиента после входа в аккаунт
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(AuthActivity.this, FindActivity.class);
+                startActivity(intent);
             }
         });
     }

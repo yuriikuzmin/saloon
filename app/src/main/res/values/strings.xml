@@ -12,4 +12,7 @@
     <string name="btn_photo_client">Добавить фото клиента</string>
     <string name="btn_save_client">Добавить клиента базу</string>
     <string name="btn_read_base">Посмотреть базу клиентов</string>
+    <string name="btn_add_cart">Добавить/посмотреть карту клиента</string>
+    <string name="btn_start_find_client">Поиск</string>
+    <string name="text_find">Введите фамилию клиента и нажмите кнопку "ПОИСК"</string>
 </resources>

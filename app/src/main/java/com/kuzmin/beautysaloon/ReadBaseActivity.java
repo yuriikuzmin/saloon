@@ -1,9 +1,12 @@
 package com.kuzmin.beautysaloon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -38,6 +41,7 @@ public class ReadBaseActivity extends AppCompatActivity {
 
         init();
         getClientFromDB();
+        setOnClickItem();
 
 
     }
@@ -46,7 +50,7 @@ public class ReadBaseActivity extends AppCompatActivity {
         myDB=FirebaseDatabase.getInstance().getReference("Saloon/Client");
         listClients=new ArrayList<>();
         listTemp=new ArrayList<>();
-        adapter= new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listClients);
+        adapter= new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, listClients);
         listView_base.setAdapter(adapter);
     }
     public void getClientFromDB(){
@@ -74,4 +78,20 @@ public class ReadBaseActivity extends AppCompatActivity {
         };
         myDB.addValueEventListener(valueEventListener);
     }
+    private void setOnClickItem(){
+        listView_base.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Client client=listTemp.get(position);
+                Intent in=new Intent(ReadBaseActivity.this, ShowActivity.class);
+                in.putExtra("photo_id", client.image_id);
+                in.putExtra("name", client.name);
+                in.putExtra("sec_name", client.sec_name);
+                in.putExtra("tel", client.tel);
+                startActivity(in);
+
+            }
+        });
+    }
+
 }
