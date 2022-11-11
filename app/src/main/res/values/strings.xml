@@ -15,4 +15,9 @@
     <string name="btn_add_cart">Добавить/посмотреть карту клиента</string>
     <string name="btn_start_find_client">Поиск</string>
     <string name="text_find">Введите фамилию клиента и нажмите кнопку "ПОИСК"</string>
+    <string name="btn_start_record">Аудио запись старт</string>
+    <string name="btn_stop_record">Стоп запись</string>
+    <string name="btn_save_procedure">Сохранить процедуру</string>
+    <string name="btn_menu">Вернуться в главное меню</string>
+    <string name="btn_play_audio">Прослушать аудио запись</string>
 </resources>

@@ -2,6 +2,7 @@ package com.kuzmin.beautysaloon;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -33,6 +34,13 @@ public class ShowActivity extends AppCompatActivity {
 
         init();
         getIntentClient();
+        btn_add_cart_client.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ShowActivity.this, CartActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
