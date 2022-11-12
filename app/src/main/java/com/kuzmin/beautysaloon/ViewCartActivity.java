@@ -57,7 +57,7 @@ public class ViewCartActivity extends AppCompatActivity {
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(ViewCartActivity.this, SaveReadActivity.class);
+                Intent intent=new Intent(ViewCartActivity.this, MainMenuActivity.class);
                 startActivity(intent);
             }
         });

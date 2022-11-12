@@ -102,7 +102,7 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/button_add_client"
+            android:id="@+id/button_enter_main_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -112,20 +112,8 @@
             android:background="@drawable/btn_blue_press"
             android:textColor="@color/white"
             android:textSize="15sp"
-            android:text="@string/btn_add_client" />
+            android:text="@string/btn_enter_main_menu" />
 
-        <Button
-            android:id="@+id/button_find_client"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/btn_blue_press"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:text="@string/btn_find_client" />
 
         <Button
             android:id="@+id/button_exit"

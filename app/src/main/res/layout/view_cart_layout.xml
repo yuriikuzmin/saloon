@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/img_view_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/background_auth" />
 
@@ -25,7 +25,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:textColor="@color/white"
+            android:textColor="@color/teal_700"
             android:textSize="15sp"
             android:textStyle="italic"
             android:text="@string/cartView_pattern" />
@@ -37,7 +37,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:textColor="@color/white"
+            android:textColor="@color/teal_700"
             android:textSize="15sp"
             android:textStyle="italic"
             android:text="TextView" />
@@ -49,7 +49,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="italic"
             android:text="TextView" />
@@ -63,7 +63,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/btn_blue_press"
-            android:text="@string/btn_play_audio" />
+            android:text="@string/btn_play_audio"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/button_menu"
@@ -74,6 +75,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/btn_blue_press"
+            android:textColor="@color/white"
             android:text="@string/btn_menu" />
         <Button
             android:id="@+id/button_exit"
@@ -84,6 +86,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/btn_blue_press"
+            android:textColor="@color/white"
             android:text="@string/btn_exit" />
     </LinearLayout>
 </RelativeLayout>

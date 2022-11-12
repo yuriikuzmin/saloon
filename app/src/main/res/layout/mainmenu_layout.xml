@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:src="@drawable/img_text_beauty">
 
         </ImageView>
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/btn_blue_press"
             android:textColor="@color/white"
@@ -66,18 +66,6 @@
             android:textSize="15sp"
             android:text="@string/btn_read_base" />
 
-        <Button
-            android:id="@+id/button_shor_push"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/btn_blue_press"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:text="@string/btn_short_push" />
 
         <Button
             android:id="@+id/button_exit"

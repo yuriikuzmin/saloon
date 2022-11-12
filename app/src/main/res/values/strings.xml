@@ -24,6 +24,8 @@
     <string name="status_record">Идет запись</string>
     <string name="status_stop">Запись остановлена</string>
     <string name="btn_short_push">Создать короткое сообщение</string>
+    <string name="btn_enter_main_menu">Перейти в главное меню</string>
+
 
 
 </resources>

@@ -39,7 +39,7 @@
             android:minHeight="48dp"
             android:text=""
             android:textColorHint="@color/white"
-            android:textSize="15sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/edit_secondName_client"
@@ -54,7 +54,7 @@
             android:minHeight="48dp"
             android:text=""
             android:textColorHint="@color/white"
-            android:textSize="15sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/edit_phone_client"
@@ -68,7 +68,7 @@
             android:inputType="phone"
             android:minHeight="48dp"
             android:textColorHint="@color/white"
-            android:textSize="15sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button_add_photo_client"
@@ -97,14 +97,14 @@
             android:text="@string/btn_save_client" />
 
         <Button
-            android:id="@+id/button_read_base"
+            android:id="@+id/button_main_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/btn_blue_press"
-            android:text="@string/btn_read_base"
+            android:text="@string/btn_enter_main_menu"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="15sp" />

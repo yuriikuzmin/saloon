@@ -29,7 +29,7 @@ public class AuthActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     public static FirebaseUser user;
     private TextView tvUserEmail;
-    private Button button_in, button_reg, button_add_clint, button_find_client, button_exit;
+    private Button button_in, button_reg, button_enter_main_menu, button_exit;
     public static String textEmail;
 
 
@@ -62,20 +62,14 @@ public class AuthActivity extends AppCompatActivity {
                 showSigNot();
             }
         });
-        button_add_clint.setOnClickListener(new View.OnClickListener() {//кнопка добавить клиента после входа в аккаунт
+        button_enter_main_menu.setOnClickListener(new View.OnClickListener() {//кнопка добавить клиента после входа в аккаунт
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(AuthActivity.this, SaveReadActivity.class);
+                Intent intent=new Intent(AuthActivity.this,MainMenuActivity.class);
                 startActivity(intent);
             }
         });
-        button_find_client.setOnClickListener(new View.OnClickListener() {//кнопка найти клиента после входа в аккаунт
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(AuthActivity.this, FindActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
     private void  init(){
@@ -85,8 +79,7 @@ public class AuthActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         button_in=(Button) findViewById(R.id.button_enter);
         button_reg=(Button) findViewById(R.id.button_registration);
-        button_add_clint=(Button) findViewById(R.id.button_add_client);
-        button_find_client=(Button)findViewById(R.id.button_find_client);
+        button_enter_main_menu=(Button) findViewById(R.id.button_enter_main_menu);
         button_exit=(Button)findViewById(R.id.button_exit);
         user = null;
     }
@@ -112,9 +105,9 @@ public class AuthActivity extends AppCompatActivity {
     }
     private void showSigIn(){ //дисплей после успешного входа в аккаунт
         tvUserEmail.setVisibility(View.VISIBLE);
-        button_add_clint.setVisibility(View.VISIBLE);
+        button_enter_main_menu.setVisibility(View.VISIBLE);
         button_exit.setVisibility(View.VISIBLE);
-        button_find_client.setVisibility(View.VISIBLE);
+
         edLogin.setVisibility(View.GONE);
         edPassword.setVisibility(View.GONE);
         button_reg.setVisibility(View.GONE);
@@ -122,9 +115,9 @@ public class AuthActivity extends AppCompatActivity {
     }
     private void showSigNot(){ //дисплей если вход в аккаунт не выполнен
         tvUserEmail.setVisibility(View.VISIBLE);
-        button_add_clint.setVisibility(View.GONE);
+        button_enter_main_menu.setVisibility(View.GONE);
         button_exit.setVisibility(View.GONE);
-        button_find_client.setVisibility(View.GONE);
+
         edLogin.setVisibility(View.VISIBLE);
         edPassword.setVisibility(View.VISIBLE);
         button_reg.setVisibility(View.VISIBLE);

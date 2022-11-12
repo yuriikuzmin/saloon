@@ -35,7 +35,7 @@ public class SaveReadActivity extends AppCompatActivity {
 
     ImageView img_photo_client;
     EditText edNameClient, edNameSecondClient, edTelClient;
-    Button btn_add_photo, btn_save_client, btn_read_base;
+    Button btn_add_photo, btn_save_client, btn_main_menu;
     private String SALOON_KEY="SALOON";
     FirebaseDatabase database;
     DatabaseReference myRef;
@@ -71,13 +71,15 @@ public class SaveReadActivity extends AppCompatActivity {
             }
         });
 
-        btn_read_base.setOnClickListener(new View.OnClickListener() {
+        btn_main_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SaveReadActivity.this, ReadBaseActivity.class);
+                Intent intent=new Intent(SaveReadActivity.this, MainMenuActivity.class);
                 startActivity(intent);
             }
         });
+
+
 
     }
     public void init(){
@@ -87,7 +89,7 @@ public class SaveReadActivity extends AppCompatActivity {
         edTelClient=(EditText) findViewById(R.id.edit_phone_client);
         btn_add_photo=(Button) findViewById(R.id.button_add_photo_client);
         btn_save_client=(Button) findViewById(R.id.button_save_client);
-        btn_read_base=(Button) findViewById(R.id.button_read_base);
+        btn_main_menu=(Button) findViewById(R.id.button_main_menu);
         myRef=database.getInstance().getReference("Saloon/Client");
         storageRef=myStor.getInstance().getReference("photo");
     }
