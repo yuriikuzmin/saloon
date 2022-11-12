@@ -20,4 +20,10 @@
     <string name="btn_save_procedure">Сохранить процедуру</string>
     <string name="btn_menu">Вернуться в главное меню</string>
     <string name="btn_play_audio">Прослушать аудио запись</string>
+    <string name="cartView_pattern">Процедуру оформил пользователь:</string>
+    <string name="status_record">Идет запись</string>
+    <string name="status_stop">Запись остановлена</string>
+    <string name="btn_short_push">Создать короткое сообщение</string>
+
+
 </resources>

@@ -2,6 +2,7 @@ package com.kuzmin.beautysaloon;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -38,6 +39,10 @@ public class ShowActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(ShowActivity.this, CartActivity.class);
+                intent.putExtra("tel",tv_tel_client.getText().toString());
+                intent.putExtra("name", tv_name_client.getText().toString());
+                intent.putExtra("second",tv_second_name_client.getText().toString());
+                Log.d("LOG", "передали :"+tv_tel_client.getText().toString()+" "+" "+tv_name_client.getText().toString()+" "+tv_second_name_client.getText().toString());
                 startActivity(intent);
             }
         });
@@ -63,5 +68,7 @@ public class ShowActivity extends AppCompatActivity {
             tv_tel_client.setText(i.getStringExtra("tel"));
         }
     }
+
+
 
 }

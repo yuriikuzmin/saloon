@@ -51,9 +51,9 @@ public class CartActivity extends AppCompatActivity {
     Button btn_start_record, btn_stop_record, btn_save_proced;
     DatabaseReference mDB;
     public static String textEmail ;
-    Cart txtProsed;
+    Cart txtProsed, fn;
     AuthActivity clientTel;
-    private String fileClient;
+
     ArrayAdapter<String> adapterCart;//адаптер для отображения данных из базы в виде списка на экране
     List<String> listDataCart;//переменная для сохранения списка данных карт из базы для разворачивания в textCart
     List<Cart> listTempCart; //для сохранения всех данных класса Cart
@@ -77,12 +77,15 @@ public class CartActivity extends AppCompatActivity {
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         init();
+
         Intent intent=getIntent();
         txtTel.setText(intent.getStringExtra("tel"));
         txtName.setText(intent.getStringExtra("name"));
-        txtSecName.setText(intent.getStringExtra("sec_name"));
-        mDB= FirebaseDatabase.getInstance().getReference("Saloon/Cart"+fileClient);
-        fileClient=intent.getStringExtra("tel");
+        txtSecName.setText(intent.getStringExtra("second"));
+
+        String fname=intent.getStringExtra("tel");
+        Log.d("LOG", " fileClient="+ fname);
+        mDB= FirebaseDatabase.getInstance().getReference("Saloon/Cart/"+fname);
 
         getDataCart(); //получение списка процедур из базы по карте клиента
         setOnClickItem();//выбор процедуры для перехода на просмотр в другом окне
@@ -106,7 +109,7 @@ public class CartActivity extends AppCompatActivity {
                     mediaRecorder.stop();
                     Log.d("LOG", "Запись остановлена");
                     recordFireBase();
-                    status.setText("Запись остановлена");
+                    status.setText(R.string.status_stop);
                 }
             }
         });
@@ -114,7 +117,11 @@ public class CartActivity extends AppCompatActivity {
         btn_save_proced.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveProsed();
+                try {
+                    saveProsed();
+                }catch (Exception exception){
+                    Toast.makeText(CartActivity.this, "Добавьте аудио запись", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -133,6 +140,7 @@ public class CartActivity extends AppCompatActivity {
         adapterCart=new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, listDataCart);
         listProced.setAdapter(adapterCart);
         clientTel=new AuthActivity();
+        fn=new Cart();
         outFile=null;
         try {
             outFile=File.createTempFile("audio", name);
@@ -200,7 +208,7 @@ public class CartActivity extends AppCompatActivity {
             mediaRecorder.setOutputFile(outFile.toString());
             mediaRecorder.prepare();
             mediaRecorder.start();
-            status.setText("Идет запись");
+            status.setText(R.string.status_record);
         } catch (IOException e) {
             e.printStackTrace();
         }

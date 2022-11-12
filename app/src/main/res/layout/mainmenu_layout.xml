@@ -6,9 +6,9 @@
 
 
     <ImageView
-        android:id="@+id/img_view_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/image_background_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/background_auth" />
 
@@ -17,45 +17,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-        <TextView
-            android:id="@+id/text_viewcart_pattern"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/image_text_beauty"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:textStyle="italic"
-            android:text="@string/cartView_pattern" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/img_text_beauty">
 
-        <TextView
-            android:id="@+id/text_viewcart_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:textStyle="italic"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/text_viewcart_procedure"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:textStyle="italic"
-            android:text="TextView" />
+        </ImageView>
 
         <Button
-            android:id="@+id/button_play_audio"
+            android:id="@+id/button_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -63,27 +36,61 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/btn_blue_press"
-            android:text="@string/btn_play_audio" />
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="@string/btn_add_client" />
 
         <Button
-            android:id="@+id/button_menu"
+            android:id="@+id/button_find"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/btn_blue_press"
-            android:text="@string/btn_menu" />
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="@string/btn_find_client" />
+
+        <Button
+            android:id="@+id/button_base_see"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_blue_press"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="@string/btn_read_base" />
+
+        <Button
+            android:id="@+id/button_shor_push"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_blue_press"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="@string/btn_short_push" />
+
         <Button
             android:id="@+id/button_exit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/btn_blue_press"
+            android:textColor="@color/white"
+            android:textSize="15sp"
             android:text="@string/btn_exit" />
     </LinearLayout>
+
 </RelativeLayout>

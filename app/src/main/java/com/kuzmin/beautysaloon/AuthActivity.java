@@ -140,7 +140,7 @@ public class AuthActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(AuthActivity.this, "Проверьте вашу E-mail почту для подтверждения адреса", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AuthActivity.this, "Проверьте вашу E-mail почту для подтверждения регистрации", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(AuthActivity.this, "E-mail не верный, проверьте вашу запись", Toast.LENGTH_SHORT).show();
                 }
@@ -156,6 +156,8 @@ public class AuthActivity extends AppCompatActivity {
             tvUserEmail.setText(user.getEmail());
             textEmail=tvUserEmail.getText().toString();
             Log.d("LOG", "рез E-mail"+textEmail);
+        }else{
+            Toast.makeText(AuthActivity.this, "Проверьте вашу E-mail почту для окончания регистрации", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -168,8 +170,9 @@ public class AuthActivity extends AppCompatActivity {
                         Log.d("LOG", "Проверка результата регистрации");
                         sendEmailVer();
                         Log.d("LOG", "Проверка результата E-mail");
-                        showSigIn();
+
                         singInVer();
+
                         Toast.makeText(AuthActivity.this, "Пользователь зарегестрирован успешно", Toast.LENGTH_SHORT).show();
                     } else {
                         showSigNot();
