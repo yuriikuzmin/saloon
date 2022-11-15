@@ -50,7 +50,7 @@ public class ReadBaseActivity extends AppCompatActivity {
         myDB=FirebaseDatabase.getInstance().getReference("Saloon/Client");
         listClients=new ArrayList<>();
         listTemp=new ArrayList<>();
-        adapter= new ArrayAdapter<>(this, android.R.layout.simple_list_item_multiple_choice, listClients);
+        adapter= new ArrayAdapter<>(this, android.R.layout.simple_selectable_list_item, listClients);
         listView_base.setAdapter(adapter);
     }
     public void getClientFromDB(){

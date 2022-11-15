@@ -58,7 +58,7 @@ public class FindShowActivity extends AppCompatActivity {
         myDB= FirebaseDatabase.getInstance().getReference("Saloon/Client");
         listData=new ArrayList<>();
         listAll=new ArrayList<>();
-        adapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
+        adapter=new ArrayAdapter<>(this, android.R.layout.simple_selectable_list_item, listData);
         lw_find_client.setAdapter(adapter);
         second_name=tempSecondName.getSecond_name_find();
         Log.d("LOG", "Переданная фамилия "+second_name);

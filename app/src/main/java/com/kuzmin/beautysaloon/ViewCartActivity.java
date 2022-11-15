@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,7 +28,7 @@ import java.io.IOException;
 public class ViewCartActivity extends AppCompatActivity {
 
     TextView viewCart_pattern, master_Email, viewCart_procedure ;
-    public Button btnMenu, btnPlay, btnExit;
+    public Button btnMenu, btnPlay, btnExit, btnStopPlay;
 
     //audio переменные
     StorageReference ref;
@@ -68,6 +69,21 @@ public class ViewCartActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
+        btnStopPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.pause();
+                    } else {
+                        Toast.makeText(ViewCartActivity.this, "Воспроизведение на запущено", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    Log.d("LOG", "Ошибка остановки плейра");
+
+                }
+            }
+        });
 
     }
     private void init(){
@@ -77,6 +93,8 @@ public class ViewCartActivity extends AppCompatActivity {
         btnMenu=(Button) findViewById(R.id.button_menu);
         btnPlay=(Button) findViewById(R.id.button_play_audio);
         btnExit=(Button) findViewById(R.id.button_exit);
+        btnStopPlay=(Button) findViewById(R.id.button_stop_play);
+
         storage = FirebaseStorage.getInstance();
 
 
