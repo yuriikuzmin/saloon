@@ -1,10 +1,13 @@
 package com.kuzmin.beautysaloon;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +21,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,6 +33,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class SaveReadActivity extends AppCompatActivity {
@@ -42,6 +47,9 @@ public class SaveReadActivity extends AppCompatActivity {
     FirebaseStorage myStor;
     private StorageReference storageRef;
     Uri uploadUri;
+    static final int REQUEST_CODE_PHOTO = 1;
+    File directory;
+    final int TYPE_FOTO=1;
 
 
 
@@ -55,11 +63,15 @@ public class SaveReadActivity extends AppCompatActivity {
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         init();
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PackageManager.PERMISSION_GRANTED);
 
         btn_add_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getPhoto();
+               // getPhoto();
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                //intent.putExtra(MediaStore.EXTRA_OUTPUT, generateFile(TYPE_FOTO));
+                startActivityForResult(intent,REQUEST_CODE_PHOTO);
 
             }
         });
@@ -93,13 +105,15 @@ public class SaveReadActivity extends AppCompatActivity {
         myRef=database.getInstance().getReference("Saloon/Client");
         storageRef=myStor.getInstance().getReference("photo");
     }
-    private void getPhoto(){ //получение фото
+   /* private void getPhoto(){ //получение фото
         Intent intentChooser =new Intent();
         intentChooser.setType("image/*");//определяем тим сущности структуру пути к картинке
         intentChooser.setAction(Intent.ACTION_GET_CONTENT);//определяем назначение этой сущности
         startActivityForResult(intentChooser, 1);//запускаем активность с этой сущностью, присваиваем код запроса
         Log.d("LOG", "Картинку выбрали");
     }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -112,7 +126,32 @@ public class SaveReadActivity extends AppCompatActivity {
                 img_photo_client.setImageURI(data.getData());
             }
         }
-    }
+    }*/
+   @Override
+   protected void onActivityResult(int requestCode, int resultCode,
+                                   Intent intent) {
+       super.onActivityResult(requestCode, resultCode, intent);
+       if(requestCode==REQUEST_CODE_PHOTO){
+           if(resultCode==RESULT_OK){
+               if(intent==null){
+                   Log.d("LOG", "Intent is null");
+               }else {
+                   Log.d("LOG", "Photo uri: "+intent.getData());
+                   Bundle bndl=intent.getExtras();
+                   if(bndl!=null){
+                       Object object=intent.getExtras().get("data");
+                       if(object instanceof Bitmap){
+                           Bitmap bitmap=(Bitmap) object;
+                           img_photo_client.setImageBitmap(bitmap);
+
+                       }
+                   }
+               }
+           }else if(resultCode==RESULT_CANCELED){
+               Log.d("LOG", "Canceled");
+           }
+       }
+   }
 
     private void uploadPhoto(){
         Bitmap bitmap=((BitmapDrawable)img_photo_client.getDrawable()).getBitmap();
