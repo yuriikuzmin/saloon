@@ -26,7 +26,9 @@
     <string name="btn_short_push">Создать короткое сообщение</string>
     <string name="btn_enter_main_menu">Перейти в главное меню</string>
     <string name="btn_stop_play">Остановить воспроизведение</string>
-
+    <string name="btn_delete_user">Удаление пользователя</string>
+    <string name="text_delete_user">Для удаления пользоваетля нажмите на соответствующий E-mail</string>
+    <string name="te_user_email">Email user</string>
 
 
 </resources>
