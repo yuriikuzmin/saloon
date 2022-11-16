@@ -43,6 +43,7 @@ public class AuthActivity extends AppCompatActivity {
 
         init();
         onStart();
+
         button_in.setOnClickListener(new View.OnClickListener() {//кнопка входа после вводе логина и пароля
             @Override
             public void onClick(View v) {
@@ -69,6 +70,7 @@ public class AuthActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
     }
 
@@ -194,6 +196,10 @@ public class AuthActivity extends AppCompatActivity {
     public String getTextEmail() {
         Log.d("LOG", "рез E-mail get"+textEmail);
         return textEmail;
+    }
+    public void onBackPressed(){
+        Intent intent=new Intent(AuthActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
 
