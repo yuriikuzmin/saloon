@@ -94,15 +94,15 @@ public class AuthActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         singInVer();
 
-                        Toast.makeText(AuthActivity.this, "Пользователь определен, вход выполнен", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AuthActivity.this, R.string.note_text_2, Toast.LENGTH_SHORT).show();
                     } else {
-                        Toast.makeText(AuthActivity.this, "Пользователь не определен", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AuthActivity.this, R.string.note_text_3, Toast.LENGTH_SHORT).show();
                     }
                 }
             });
 
         } else {
-            Toast.makeText(this, "Введите логин и пароль", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.note_text_1, Toast.LENGTH_SHORT).show();
         }
     }
     private void showSigIn(){ //дисплей после успешного входа в аккаунт
@@ -135,9 +135,9 @@ public class AuthActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(AuthActivity.this, "Проверьте вашу E-mail почту для подтверждения регистрации", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AuthActivity.this, R.string.note_text_4, Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(AuthActivity.this, "E-mail не верный, проверьте вашу запись", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AuthActivity.this, R.string.note_text_5, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -152,7 +152,7 @@ public class AuthActivity extends AppCompatActivity {
             textEmail=tvUserEmail.getText().toString();
             Log.d("LOG", "рез E-mail"+textEmail);
         }else{
-            Toast.makeText(AuthActivity.this, "Проверьте вашу E-mail почту для окончания регистрации", Toast.LENGTH_SHORT).show();
+            Toast.makeText(AuthActivity.this, R.string.note_text_6, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -168,17 +168,17 @@ public class AuthActivity extends AppCompatActivity {
 
                         singInVer();
 
-                        Toast.makeText(AuthActivity.this, "Пользователь зарегестрирован успешно", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AuthActivity.this, R.string.note_text_7, Toast.LENGTH_SHORT).show();
                     } else {
                         showSigNot();
-                        Toast.makeText(AuthActivity.this, "Регистрация не выполнена", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AuthActivity.this, R.string.note_text_8, Toast.LENGTH_SHORT).show();
 
                     }
                 }
             });
 
         }else {
-            Toast.makeText(this, "Введите логин и пароль", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.note_text_9, Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -197,7 +197,7 @@ public class AuthActivity extends AppCompatActivity {
         Log.d("LOG", "рез E-mail get"+textEmail);
         return textEmail;
     }
-    public void onBackPressed(){
+   public void onBackPressed(){
         Intent intent=new Intent(AuthActivity.this, MainActivity.class);
         startActivity(intent);
     }

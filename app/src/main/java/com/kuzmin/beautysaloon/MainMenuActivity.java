@@ -31,9 +31,6 @@ public class MainMenuActivity extends AppCompatActivity {
 
         init();
 
-
-
-
         btn_add_client.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

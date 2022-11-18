@@ -162,9 +162,9 @@ public class CartActivity extends AppCompatActivity {
             if(id!=null){
                 Log.d("LOG", "id процедуру ="+id);
                 mDB.child(id).setValue(txtProsed);
-                Toast.makeText(this, "Запись новой процедуры сохранена", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.note_text_11, Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Процедура не сохранена", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.note_text_12, Toast.LENGTH_SHORT).show();
             }
         }
     }

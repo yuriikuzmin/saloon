@@ -188,7 +188,7 @@ public class SaveReadActivity extends AppCompatActivity {
 
             if (id != null) {
                 myRef.child(id).setValue(newClient);
-                Toast.makeText(this, "Запись нового пользователя сохранена", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.note_text_15, Toast.LENGTH_SHORT).show();
                 edNameClient.setText("");
                 edNameSecondClient.setText("");
                 edTelClient.setText("");
@@ -198,7 +198,7 @@ public class SaveReadActivity extends AppCompatActivity {
             }
 
         } else {
-            Toast.makeText(this, "Заполните поля", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.note_text_16, Toast.LENGTH_SHORT).show();
         }
     }
 

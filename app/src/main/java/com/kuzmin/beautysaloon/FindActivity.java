@@ -38,7 +38,7 @@ public class FindActivity extends AppCompatActivity {
                     startActivity(intent);
 
                 }else {
-                    Toast.makeText(FindActivity.this, "Введите фамилию клиента", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FindActivity.this, R.string.note_text_13, Toast.LENGTH_SHORT).show();
                 }
 
 

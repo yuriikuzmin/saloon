@@ -76,7 +76,7 @@ public class ViewCartActivity extends AppCompatActivity {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.pause();
                     } else {
-                        Toast.makeText(ViewCartActivity.this, "Воспроизведение на запущено", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ViewCartActivity.this, R.string.note_text_17, Toast.LENGTH_SHORT).show();
                     }
                 }catch (Exception e){
                     Log.d("LOG", "Ошибка остановки плейра");

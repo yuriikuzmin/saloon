@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Beauty saloon</string>
+    <string name="beauty_saloon">beauty saloon</string>
+    <string name="text_auth">Введите логин и пароль</string>
+    <string name="text_login">Login (E-mail)</string>
+    <string name="text_password">Password</string>
+    <string name="btn_enter">Войти</string>
+    <string name="btn_registration">Зарегестрироваться</string>
+    <string name="btn_exit">Выйти из аккаунта</string>
+    <string name="btn_add_client">Добавить клиента в базу</string>
+    <string name="btn_find_client">Найти клиента в базе</string>
+    <string name="btn_photo_client">Добавить фото клиента</string>
+    <string name="btn_save_client">Добавить клиента базу</string>
+    <string name="btn_read_base">Посмотреть базу клиентов</string>
+    <string name="btn_add_cart">Добавить/посмотреть карту клиента</string>
+    <string name="btn_start_find_client">Поиск</string>
+    <string name="text_find">Введите фамилию клиента и нажмите кнопку "ПОИСК"</string>
+    <string name="btn_start_record">Аудио запись старт</string>
+    <string name="btn_stop_record">Стоп запись</string>
+    <string name="btn_save_procedure">Сохранить процедуру</string>
+    <string name="btn_menu">Вернуться в главное меню</string>
+    <string name="btn_play_audio">Прослушать аудио запись</string>
+    <string name="cartView_pattern">Процедуру оформил пользователь:</string>
+    <string name="status_record">Идет запись</string>
+    <string name="status_stop">Запись остановлена</string>
+    <string name="btn_short_push">Создать короткое сообщение</string>
+    <string name="btn_enter_main_menu">Перейти в главное меню</string>
+    <string name="btn_stop_play">Остановить воспроизведение</string>
+    <string name="btn_delete_user">Удаление пользователя</string>
+    <string name="text_delete_user">Для удаления пользоваетля нажмите на соответствующий E-mail</string>
+    <string name="te_user_email">Email user</string>
+    <string name="note_text_1">Введите логин и пароль</string>
+    <string name="note_text_2">Пользователь определен, вход выполнен</string>
+    <string name="note_text_3">Пользователь не определен</string>
+    <string name="note_text_4">Проверьте вашу  почту для подтверждения регистрации</string>
+    <string name="note_text_5">E-mail не верный, проверьте вашу запись</string>
+    <string name="note_text_6">Проверьте вашу E-mail почту для окончания регистрации</string>
+    <string name="note_text_7">Пользователь зарегестрирован успешно</string>
+    <string name="note_text_8">Регистрация не выполнена</string>
+    <string name="note_text_9">Введите логин и пароль</string>
+    <string name="note_text_10">Добавьте аудио запись</string>
+    <string name="note_text_11">Запись новой процедуры сохранена</string>
+    <string name="note_text_12">Процедура не сохранена</string>
+    <string name="note_text_13">Введите фамилию клиента</string>
+    <string name="note_text_14">Совпадений нет</string>
+    <string name="note_text_15">Запись нового пользователя сохранена</string>
+    <string name="note_text_16">Заполните поля</string>
+    <string name="note_text_17">Воспроизведение запущено</string>
+
+
+</resources>
