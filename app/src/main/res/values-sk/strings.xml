@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Beauty saloon</string>
+    <string name="beauty_saloon">beauty saloon</string>
+    <string name="text_auth">Zadajte prihlasovacie meno a heslo</string>
+    <string name="text_login">Login (E-mail)</string>
+    <string name="text_password">Password</string>
+    <string name="btn_enter">Vstúpiť</string>
+    <string name="btn_registration">Registrovať</string>
+    <string name="btn_exit">Odhlásiť Sa</string>
+    <string name="btn_add_client">Pridať klienta do databázy</string>
+    <string name="btn_find_client">Nájdite klienta v databáze</string>
+    <string name="btn_photo_client">Pridajte fotografiu klienta</string>
+    <string name="btn_save_client">Pridajte klientsku základňu</string>
+    <string name="btn_read_base">Zobraziť zákaznícku základňu</string>
+    <string name="btn_add_cart">Pridať/zobraziť zákaznícku kartu</string>
+    <string name="btn_start_find_client">Vyhľadávanie</string>
+    <string name="text_find">Zadajte priezvisko klienta a kliknite na tlačidlo "HĽADAŤ".</string>
+    <string name="btn_start_record">Spustenie nahrávania zvuku</string>
+    <string name="btn_stop_record">Zastavte nahrávanie</string>
+    <string name="btn_save_procedure">Uložiť postup</string>
+    <string name="btn_menu">Späť do hlavnej ponuky</string>
+    <string name="btn_play_audio">Vypočujte si zvukový záznam</string>
+    <string name="cartView_pattern">Postup bol vytvorený používateľom:</string>
+    <string name="status_record">Prebieha nahrávanie</string>
+    <string name="status_stop">Nahrávanie bolo zastavené</string>
+    <string name="btn_short_push">Vytvorte krátku správu</string>
+    <string name="btn_enter_main_menu">Prejdite do hlavnej ponuky</string>
+    <string name="btn_stop_play">Zastavte prehrávanie</string>
+    <string name="btn_delete_user">Odstránenie používateľa</string>
+    <string name="text_delete_user">Ak chcete používateľa odstrániť, kliknite na príslušný E-mail</string>
+    <string name="te_user_email">Email user</string>
+    <string name="note_text_1">Zadajte prihlasovacie meno a heslo</string>
+    <string name="note_text_2">Definovaný používateľom, prihlásený</string>
+    <string name="note_text_3">Používateľ nie je definovaný</string>
+    <string name="note_text_4">Skontrolujte svoj e-mail a potvrďte svoju registráciu</string>
+    <string name="note_text_5">E-mail nie je správne, skontrolujte zadanie</string>
+    <string name="note_text_6">Pre dokončenie registrácie skontrolujte svoj e-mail</string>
+    <string name="note_text_7">Používateľ sa úspešne zaregistroval</string>
+    <string name="note_text_8">Registrácia zlyhala</string>
+    <string name="note_text_9">Zadajte prihlasovacie meno a heslo</string>
+    <string name="note_text_10">Pridajte zvukovú nahrávku</string>
+    <string name="note_text_11">Nový záznam postupu bol uložený</string>
+    <string name="note_text_12">Postup nie je uložený</string>
+    <string name="note_text_13">Zadajte priezvisko zákazníka</string>
+    <string name="note_text_14">Žiadne zhody</string>
+    <string name="note_text_15">Nový záznam používateľa bol uložený</string>
+    <string name="note_text_16">Vyplňte polia</string>
+    <string name="note_text_17">Spustilo sa prehrávanie</string>
+
+
+</resources>

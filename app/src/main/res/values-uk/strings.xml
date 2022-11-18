@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Beauty saloon</string>
+    <string name="beauty_saloon">beauty saloon</string>
+    <string name="text_auth">Введіть логін та пароль</string>
+    <string name="text_login">Login (E-mail)</string>
+    <string name="text_password">Password</string>
+    <string name="btn_enter">Увійти</string>
+    <string name="btn_registration">Зареєструватися</string>
+    <string name="btn_exit">Вийти з акаунту</string>
+    <string name="btn_add_client">Додати клієнта до бази</string>
+    <string name="btn_find_client">Знайти клієнта в базі</string>
+    <string name="btn_photo_client">Додати фото клієнта</string>
+    <string name="btn_save_client">Додати клієнта у базу</string>
+    <string name="btn_read_base">Переглянути базу клієнтів</string>
+    <string name="btn_add_cart">Додати/подивитися карту клієнта</string>
+    <string name="btn_start_find_client">Пошук</string>
+    <string name="text_find">Введіть прізвище клієнта та натисніть кнопку "ПОШУК"</string>
+    <string name="btn_start_record">Аудіо запис старт</string>
+    <string name="btn_stop_record">Стоп запис</string>
+    <string name="btn_save_procedure">Зберегти процедуру</string>
+    <string name="btn_menu">Повернутися до головного меню</string>
+    <string name="btn_play_audio">Прослухати аудіо запис</string>
+    <string name="cartView_pattern">Процедуру оформив користувач:</string>
+    <string name="status_record">Йде запис</string>
+    <string name="status_stop">Запис зупинено</string>
+    <string name="btn_short_push">Створити коротке повідомлення</string>
+    <string name="btn_enter_main_menu">Перейти до головного меню</string>
+    <string name="btn_stop_play">Зупинити відтворення запису</string>
+    <string name="btn_delete_user">Видалення користувача</string>
+    <string name="text_delete_user">Для видалення користувача натисніть на відповідний E-mail</string>
+    <string name="te_user_email">Email user</string>
+    <string name="note_text_1">Введіть логін та пароль</string>
+    <string name="note_text_2">Користувача визначено, вхід виконано</string>
+    <string name="note_text_3">Користувача не визначено</string>
+    <string name="note_text_4">Перевірте вашу пошту для підтвердження реєстрації</string>
+    <string name="note_text_5">E-mail не вірний, перевірте ваш запис</string>
+    <string name="note_text_6">Перевірте вашу електронну пошту для закінчення реєстрації</string>
+    <string name="note_text_7">Користувача зареєстровано успішно</string>
+    <string name="note_text_8">Реєстрація не виконана</string>
+    <string name="note_text_9">Введіть логін та пароль</string>
+    <string name="note_text_10">Додайте аудіо запис</string>
+    <string name="note_text_11">Запис нової процедури збережено</string>
+    <string name="note_text_12">Запис процедури не збережено</string>
+    <string name="note_text_13">Введіть прізвище клієнта</string>
+    <string name="note_text_14">Збігів немає</string>
+    <string name="note_text_15">Запис нового користувача збережено</string>
+    <string name="note_text_16">Заповніть поля</string>
+    <string name="note_text_17">Відтворення запису запущено</string>
+
+
+</resources>
