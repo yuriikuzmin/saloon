@@ -43,9 +43,13 @@
     <string name="note_text_12">Процедура не сохранена</string>
     <string name="note_text_13">Введите фамилию клиента</string>
     <string name="note_text_14">Совпадений нет</string>
-    <string name="note_text_15">Запись нового пользователя сохранена</string>
+    <string name="note_text_15">Запись нового клиента сохранена</string>
     <string name="note_text_16">Заполните поля</string>
-    <string name="note_text_17">Воспроизведение запущено</string>
-
+    <string name="note_text_17">Воспроизведение остановлено</string>
+    <string name="note_text_18">Воспроизведение влючено</string>
+    <string name="note_text_19">Фамилия клиента</string>
+    <string name="note_text_20">Всего записей в базе : </string>
+    <string name="note_text_21">№ записи</string>
+    <string name="note_text_22">Результат поиска</string>
 
 </resources>

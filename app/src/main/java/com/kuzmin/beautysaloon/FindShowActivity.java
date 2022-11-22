@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,8 @@ public class FindShowActivity extends AppCompatActivity {
     DatabaseReference myDB;
     private String SALOON_KEY="Saloon"; //ключ к директории базы данных
     public String second_name;
+    TextView txt_second;
+    TextView txt_result;
 
 
 
@@ -62,6 +65,10 @@ public class FindShowActivity extends AppCompatActivity {
         lw_find_client.setAdapter(adapter);
         second_name=tempSecondName.getSecond_name_find();
         Log.d("LOG", "Переданная фамилия "+second_name);
+        txt_second=(TextView) findViewById(R.id.txt_view_find);
+        txt_second.setText(R.string.note_text_19);
+        txt_result=(TextView) findViewById(R.id.txt_view_result);
+        txt_result.setText(R.string.note_text_22);
     }
 
     private void getDataFromDB(){

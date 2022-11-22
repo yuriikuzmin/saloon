@@ -43,7 +43,13 @@
     <string name="note_text_12">Procedure not saved</string>
     <string name="note_text_13">Enter customer is last name</string>
     <string name="note_text_14">No matches</string>
-    <string name="note_text_15">New user record saved</string>
+    <string name="note_text_15">New customer record saved</string>
     <string name="note_text_16">Fill in the fields</string>
-    <string name="note_text_17">Playback started</string>
+    <string name="note_text_17">Playback stopped</string>
+    <string name="note_text_18">Playback enabled</string>
+    <string name="note_text_19">Last name of the client</string>
+    <string name="note_text_20">Total records in the database : </string>
+    <string name="note_text_21">№ records</string>
+    <string name="note_text_22">Search result</string>
+
 </resources>

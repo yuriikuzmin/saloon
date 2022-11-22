@@ -43,9 +43,15 @@
     <string name="note_text_12">Запис процедури не збережено</string>
     <string name="note_text_13">Введіть прізвище клієнта</string>
     <string name="note_text_14">Збігів немає</string>
-    <string name="note_text_15">Запис нового користувача збережено</string>
+    <string name="note_text_15">Запис нового клієнта збережено</string>
     <string name="note_text_16">Заповніть поля</string>
-    <string name="note_text_17">Відтворення запису запущено</string>
+    <string name="note_text_17">Відтворення зупинено</string>
+    <string name="note_text_18">Відтворення включено</string>
+    <string name="note_text_19">Прізвище клієнта</string>
+    <string name="note_text_20">Усього записів у базі : </string>
+    <string name="note_text_21">№ запису</string>
+    <string name="note_text_22">Результат пошука</string>
+
 
 
 </resources>

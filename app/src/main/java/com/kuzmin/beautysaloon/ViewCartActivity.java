@@ -51,6 +51,7 @@ public class ViewCartActivity extends AppCompatActivity {
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 playAudio();
             }
         });
@@ -58,6 +59,15 @@ public class ViewCartActivity extends AppCompatActivity {
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.pause();
+                        mediaPlayer=null;
+                    } else {
+                        Toast.makeText(ViewCartActivity.this, R.string.note_text_17, Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    Log.d("LOG", "Ошибка остановки плейра");}
                 Intent intent=new Intent(ViewCartActivity.this, MainMenuActivity.class);
                 startActivity(intent);
             }
@@ -65,6 +75,16 @@ public class ViewCartActivity extends AppCompatActivity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.pause();
+                        mediaPlayer=null;
+                    } else {
+                        Toast.makeText(ViewCartActivity.this, R.string.note_text_17, Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    Log.d("LOG", "Ошибка остановки плейра");}
+
                 Intent in=new Intent(ViewCartActivity.this, AuthActivity.class);
                 startActivity(in);
             }
@@ -75,6 +95,7 @@ public class ViewCartActivity extends AppCompatActivity {
                 try {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.pause();
+                        mediaPlayer=null;
                     } else {
                         Toast.makeText(ViewCartActivity.this, R.string.note_text_17, Toast.LENGTH_SHORT).show();
                     }
@@ -94,9 +115,7 @@ public class ViewCartActivity extends AppCompatActivity {
         btnPlay=(Button) findViewById(R.id.button_play_audio);
         btnExit=(Button) findViewById(R.id.button_exit);
         btnStopPlay=(Button) findViewById(R.id.button_stop_play);
-
         storage = FirebaseStorage.getInstance();
-
 
     }
 
@@ -112,39 +131,45 @@ public class ViewCartActivity extends AppCompatActivity {
         }
     }
 
-    public void playAudio(){
+    public void playAudio() {
         // воспроизведение
-        ref=storage.getReference(uriRef.getPath());
-        Log.d("LOG", "myRef  ссылка :"+ref);
+        if (mediaPlayer != null) {
+            Toast.makeText(ViewCartActivity.this, R.string.note_text_18, Toast.LENGTH_SHORT).show();
+        } else {
+            ref = storage.getReference(uriRef.getPath());
+            Log.d("LOG", "myRef  ссылка :" + ref);
 
 
+            File localFile = null;
+            try {
+                localFile = File.createTempFile("rock", ".mp3");//создаем файл для загрузки из базы
+                Log.d("LOG", "localFile :" + localFile.toString());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //загружаем файл мр3 из базы в созданный файл.
+            ref.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                    // Local temp file has been created
+                    Log.d("LOG", "Загружено localFile успешно");
 
-        File localFile = null;
-        try {
-            localFile = File.createTempFile("rock", ".mp3");//создаем файл для загрузки из базы
-            Log.d("LOG", "localFile :"+localFile.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
+                    mediaPlayer = MediaPlayer.create(ViewCartActivity.this, uri);
+                    mediaPlayer.start();
+
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                }
+            });
+            uri = Uri.parse(localFile.getPath());
+            Log.d("LOG", "uri:" + uri);
+
         }
-        //загружаем файл мр3 из базы в созданный файл.
-        ref.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                // Local temp file has been created
-                Log.d("LOG", "Загружено localFile успешно");
-                mediaPlayer= MediaPlayer.create(ViewCartActivity.this, uri);
-                mediaPlayer.start();
 
-
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception exception) {
-                // Handle any errors
-            }
-        });
-        uri= Uri.parse(localFile.getPath());
-        Log.d("LOG", "uri:"+uri);
 
     }
 

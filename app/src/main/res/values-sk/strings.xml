@@ -43,9 +43,15 @@
     <string name="note_text_12">Postup nie je uložený</string>
     <string name="note_text_13">Zadajte priezvisko zákazníka</string>
     <string name="note_text_14">Žiadne zhody</string>
-    <string name="note_text_15">Nový záznam používateľa bol uložený</string>
+    <string name="note_text_15">Nový záznam o zákazníkovi uložený</string>
     <string name="note_text_16">Vyplňte polia</string>
-    <string name="note_text_17">Spustilo sa prehrávanie</string>
+    <string name="note_text_17">Prehrávanie sa zastavilo</string>
+    <string name="note_text_18">Prehrávanie je povolené</string>
+    <string name="note_text_19">Priezvisko klienta</string>
+    <string name="note_text_20">Celkový počet záznamov v databáze : </string>
+    <string name="note_text_21">№ záznamy</string>
+    <string name="note_text_22">Výsledky vyhľadávania</string>
+
 
 
 </resources>
